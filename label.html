@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>获取标签</title>
+	</head>
+	<body>
+		<h2>获取标签</h2>
+		<pre>
+			获取一个网页中所有的标签
+		</pre>
+		<h1><p>01</p></h1>
+		<p>11<p>12</p></p>
+		<p>2</p>
+		
+	</body>
+	<script>
+		var a = document.getElementsByTagName("*");
+		//var b = document.querySelectorAll("*");
+		console.log("a:" , a);
+		
+		
+		//类数组对象转换成数组
+		var aArr = Array.from(a);
+		console.log("aArr:",aArr);
+		console.log("aArr.slice():",aArr.slice());
+		
+		//自定义方法
+		function objToArr(obj){
+			var arr = [];
+			var leng = obj.length;
+			for(var i=0;i<leng;i++){
+				arr.push(obj[i]);
+			}
+			return arr;
+		}
+		
+		var aArr2 = objToArr(a);
+		console.log("aArr2:",aArr2);
+		console.log("aArr2.slice():",aArr2.slice());
+		
+		//document.getElementsByTagName("body")[0].tagName;
+		
+		//返回dom元素标签名的数组
+		function domByTagName(dArr){
+			var tagArr = [];
+			var lg = dArr.length;
+			for(var i=0;i<lg;i++){
+				tagArr.push(dArr[i].tagName);
+			}
+			return tagArr;
+		}
+		
+		//获取由标签名组成的新数组
+		var tagNameArr = domByTagName(aArr2);
+		console.log("tagNameArr:",tagNameArr);
+		//var tagl = tagNameArr.length;
+		
+		function way(arr){
+			for(var i=0;i<=arr.length;i++){
+				for(var j=i+1;j<=arr.length;){
+					if(arr[i] == arr[j]){
+						arr.splice(i,1);
+					}else{
+						j++;	
+					}
+				}
+			}
+			return arr;
+		}
+		way(tagNameArr);
+		console.log("tagNameArr _last:",tagNameArr);
+		
+		function way2(arr){
+			var newarr = [];
+			for(var i=0;i<arr.length;i++){
+				if(newarr.indexOf(arr[i]) == -1){
+					newarr.push(arr[i]);
+				}	
+			}
+			return newarr;
+		}
+		way2(tagNameArr);
+		console.log("tagNameArr _last:",tagNameArr);
+		
+		function way3(arr){
+			var newArr = [arr[0]];
+			for(var i=0;i<arr.length;i++){
+				var hasTrue = false;
+				for(var j=0;j<newArr.length;j++){
+					if(arr[i] == newArr[j]){
+						hasTrue = true;
+					}
+				}
+				if(!hasTrue){
+					newArr.push(arr[i]);
+				}
+			}
+			return newArr;
+		}
+		way3(tagNameArr);
+		console.log("tagNameArr _last:",tagNameArr);
+		
+		
+		//es6
+		//new Set([...document.querySelectorAll("*")].map(v => v.tagName));
+		
+		new Set(Array.from(document.querySelectorAll("*")).map(v => v.tagName));
+	</script>
+</html>
