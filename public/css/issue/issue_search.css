@@ -1,0 +1,129 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  background: #efeff4;
+  font-family: "微软雅黑";
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.search_box {
+  width: 100%;
+  height: 44px;
+  background: #fff;
+  padding: 0px 10px 0px 10px;
+  box-sizing: border-box;
+  line-height: 44px;
+  border-bottom: 1px solid #e3e3e8;
+  position: relative;
+}
+.search_box .ind_search {
+  float: left;
+  height: 32px;
+  width: 83%;
+  position: relative;
+}
+.search_box .ind_search .search_se {
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  top: 16px;
+  left: 10px;
+}
+.search_box .ind_search .ind_search_wor {
+  width: 100%;
+  height: 32px;
+  border: 0px;
+  background: #f1f1f1;
+  border-radius: 3px;
+  padding-left: 28px;
+  color: #b5b5b5;
+  font-size: 14px;
+  font-family: "微软雅黑";
+  box-sizing: border-box;
+  outline: none;
+}
+.search_box .ind_search #search_x {
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  top: 17px;
+  right: 10px;
+  display: none;
+}
+.search_box .srh_cal {
+  font-size: 14px;
+  color: #ea580e;
+  float: left;
+  text-align: right;
+  width: 15%;
+  display: inline-block;
+  font-family: "微软雅黑";
+}
+.search_on {
+  width: 100%;
+  background: #fff;
+  padding-left: 25px;
+  box-sizing: border-box;
+  display: none;
+}
+.search_on .search_on_list li {
+  border-bottom: 1px solid #ebebee;
+  display: inline-block;
+  width: 100%;
+  height: 48px;
+  line-height: 16px;
+}
+.search_on .search_on_list li .lis_large {
+  font-size: 14px;
+  color: #323232;
+  margin-top: 10px;
+  display: inline-block;
+}
+.search_on .search_on_list li .lis_large .lar_col {
+  color: #ea580e;
+}
+.search_on .search_on_list li .lis_sma {
+  font-size: 12px;
+  color: #898989;
+}
+.search_on .search_on_list li.bor_none {
+  border: 0px;
+}
+.search_dis {
+  width: 100%;
+  height: 36px;
+  box-sizing: border-box;
+  padding-left: 15px;
+  padding-right: 38px;
+  line-height: 36px;
+  font-size: 14px;
+  color: #6a6a6b;
+  font-family: "微软雅黑";
+  display: none;
+}
+.search_dis .dis_rig {
+  font-size: 12px;
+  float: right;
+}
+.sea_li {
+  background: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 25px;
+  display: none;
+}
+.sea_li .sea_list li {
+  width: 100%;
+  height: 32px;
+  border-bottom: 1px solid #ebebee;
+  display: inline-block;
+  line-height: 32px;
+  color: #323232;
+  font-size: 14px;
+}
+.sea_li .sea_list li.sea_none {
+  border: 0px;
+}
