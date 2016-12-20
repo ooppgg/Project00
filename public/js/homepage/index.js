@@ -174,6 +174,10 @@ $('.back_index').on('tap',function(){
 	$('.city_select').css('display','none')
 })
 
-$('.index_show_right_bg').on('click',function(){
+$('.index_show_right_bg').on('touchstart',function(){
 	$(window).scrollTop(0);
+})
+
+$('.index_search').on('touchstart',function(){
+	window.open('index_search.html','_self');
 })

@@ -593,7 +593,7 @@ body {
   background-size: cover;
 }
 .appo_bar .appo_bar_name {
-  width: 70%;
+  width: 68%;
   height: 30px;
   float: left;
   margin-left: 50px;
@@ -765,9 +765,6 @@ body {
   outline: none;
   border: 0px;
   font-family: "微软雅黑";
-}
-#time {
-  display: block;
 }
 .wipe .wipe_sm .wipe_one {
   width: 100%;

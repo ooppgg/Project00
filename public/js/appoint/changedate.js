@@ -1,26 +1,23 @@
-window.onload = function(){
-	var btn = document.getElementById("wipe_btn");
-	var wipe = document.getElementById("wipe_appo");
-	var cancel1 = document.getElementById("cancel1");
-	var confirm1 = document.getElementById("confirm1");
-	var time = document.getElementById("time");
-	var confirm2 = document.getElementById("confirm2");
-	var change = document.getElementById("change");
-	var ensure = document.getElementById("ensure");
-
-	btn.onclick = function(){
-		wipe.style.display = "block";
-	}
-	cancel1.onclick = function(){
-		wipe.style.display = "none";
-	}
-	confirm1.onclick = function(){
-		wipe.style.display = "none";
-	}
-	confirm2.onclick = function(){
-		time.style.display = "none";
-	}
-	change.onclick = function(){
-		ensure.style.display = "block";
-	}
-}
+$(function(){
+	$('#wipe_btn').on('touchstart',function(){
+		$('#wipe_appo').css('display','block');
+	})
+	$('#cancel1').on('touchstart',function(){
+		$('#wipe_appo').css('display','none');
+	})
+	$('#confirm1').on('touchstart',function(){
+		$('#wipe_appo').css('display','none');
+	})
+	$('#quxiao').on('touchstart',function(){
+		window.open('orders.html','_self');
+	})
+	$('#change').on('touchstart',function(){
+		$('#time').css('display','block');	
+	})
+	$('#confirm2').on('touchstart',function(){
+		$('#ensure').css('display','block');
+	})
+	$('#queding').on('touchstart',function(){
+		window.open('orders.html','_self');	
+	})
+})

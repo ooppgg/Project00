@@ -1,40 +1,42 @@
-window.onload = function(){
-	var user = document.getElementById("user");
-	var pass = document.getElementById("pass");
-	var login_btn = document.getElementById("login_btn");
-	
-	user.onblur = function(){
-		//console.log(building.value);
-		if(user.value == ""){
-			user.style.background = "#FFC0CB";
+$(function(){
+	$('#user').on('blur',function(){
+		if($('#user').val() == ""){
+			$('#user').css('background','#FFC0CB');
 		}else{
-			user.style.background = "#FFF";	
+			$('#user').css('background','#FFF');
 		}
-		console.log(user.value != "" && pass.value != "");
-		if(user.value != "" && pass.value != ""){
-			login_btn.style.background = "#EA5404";
-			login_btn.onclick = function(){
+		//console.log(user.value != "" && pass.value != "");
+		if($('#user').val() != "" && $('#pass').val() != ""){
+			$('#login_btn').css('background','#EA5404');
+			$('#login_btn').on('touchstart',function(){
 				/*add_all.style.display = "none";
 				add_zhe.style.display = "block";*/
 				window.open('../I/ILogin.html','_self'); 
-			}
+			})
 		}
-	}
-	pass.onblur = function(){
+	})
+		
+	$('#pass').on('blur',function(){
 		//console.log(address.value);
-		if(pass.value == ""){
-			pass.style.background = "#FFC0CB";
+		if($('#pass').val() == ""){
+			$('#pass').css('background','#FFC0CB');
 		}else{
-			pass.style.background = "#FFF";
+			$('#pass').css('background','#FFF');
 		}
-		console.log(pass.value != "" && user.value != "");
-		if(tel.value != "" && pass.value != ""){
+		//console.log(pass.value != "" && user.value != "");
+		if($('#tel').val() != "" && $('#pass').val() != ""){
 			login_btn.style.background = "#EA5404";
-			login_btn.onclick = function(){
+			$('#login_btn').css('background','#EA5404');
+			$('#login_btn').on('touchstart',function(){
 				/*add_all.style.display = "none";
 				add_zhe.style.display = "block";*/
 				window.open('../I/ILogin.html','_self'); 
-			}
+			})
 		}
-	}
-}
+	})
+	$('#fanhui').on('touchstart',function(){
+		 window.open('../I/I.html','_self');
+	})
+})
+	
+	

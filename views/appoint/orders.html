@@ -9,7 +9,7 @@
 		<title>二维码的房产单 -  杭州摆摆网络科技有限公司</title>
 		<link rel="stylesheet" href="//cdn.bootcss.com/normalize/5.0.0/normalize.min.css" />
 		<link rel="stylesheet" href="../../public/css/appoint/orders.css" />
-		<script src="../../public/js/appoint/appointdetails.js"></script>
+		
 	</head>
 	<body>
 		<div class="head_deng">
@@ -71,8 +71,8 @@
 			</div>
 		</div>
 		<div class="order_btn">
-			<span onclick="window.open('changedate.html','_self')" class="btn_one">改期</span>
-			<span onclick="window.open('upload.html','_self')" class="btn_one">达成</span>
+			<span id="btn01" class="btn_one">改期</span>
+			<span id="btn02" class="btn_one">达成</span>
 			<span class="btn_one btn_line">取消</span>
 		</div>
 		<div id="wipe_appo" class="wipe">
@@ -82,5 +82,9 @@
 				<span id="confirm" class="cancel confirm">确定</span>
 			</div>
 		</div>
+		<script src="../../public/js/touch/zepto.min.js"></script>
+		<script src="../../public/js/touch/touch.js"></script>
+		<script src="../../public/js/touch/zepto-fx.js"></script>
+		<script src="../../public/js/appoint/appointdetails.js"></script>
 	</body>
 </html>

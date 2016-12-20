@@ -1,17 +1,24 @@
-window.onload = function(){
-	var up_cancel = document.getElementById("up_cancel");
-	var up_confirm = document.getElementById("up_confirm");
-	var up_can = document.getElementById("up_can");
-	var up_kua = document.getElementById("up_kua");
-	var ensure = document.getElementById("ensure");
-
-	up_cancel.onclick = function(){
-		up_kua.style.display = "block";
-	}
-	up_can.onclick = function(){
-		up_kua.style.display = "none";
-	}
-	up_confirm.onclick = function(){
-		ensure.style.display = "block";
-	}
-}
+$(function(){
+	$('#up_cancel').on('touchstart',function(){
+		$('#up_kua').css('display','block');
+	})
+	$('#up_can').on('touchstart',function(){
+		$('#up_kua').css('display','none');
+	}) 
+	$('#up_confirm').on('touchstart',function(){
+		$('#ensure').css('display','block');
+	}) 
+	$('#confirm').on('touchstart',function(){
+		window.open('orders.html','_self');
+	}) 
+	$('#wipe_one').on('touchstart',function(){
+		window.open('orders.html','_self');
+	})
+	$('#confirm').on('touchstart',function(){
+		// location.href = 'orders.html';
+		window.open('orders.html','_self');
+	})
+})
+	
+	
+	

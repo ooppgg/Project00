@@ -1,15 +1,18 @@
-window.onload = function(){
-	var btn = document.getElementById("wipe_btn");
-	var wipe = document.getElementById("wipe_appo");
-	var cancel = document.getElementById("cancel");
-	var confirm = document.getElementById("confirm");
-	btn.onclick = function(){
-		wipe.style.display = "block";
-	}
-	cancel.onclick = function(){
-		wipe.style.display = "none";
-	}
-	confirm.onclick = function(){
-		wipe.style.display = "none";
-	}
-}
+$(function(){
+	$('#wipe_btn').on('touchstart',function(){
+		$('#wipe_appo').css('display','block');
+	})
+	$('#cancel').on('touchstart',function(){
+		$('#wipe_appo').css('display','none');
+	}) 
+	$('#confirm').on('touchstart',function(){
+		$('#wipe_appo').css('display','none');
+	})
+	$('#btn01').on('touchstart',function(){
+		window.open('changedate.html','_self');	
+	})
+	$('#btn02').on('touchstart',function(){
+		window.open('upload.html','_self');	
+	})
+});
+	

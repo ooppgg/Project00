@@ -9,7 +9,7 @@
 		<title>二维码的房产单 -  杭州摆摆网络科技有限公司</title>
 		<link rel="stylesheet" href="//cdn.bootcss.com/normalize/5.0.0/normalize.min.css" />
 		<link rel="stylesheet" href="../../public/css/appoint/changedate.css" />
-		<script src="../../public/js/appoint/changedate.js"></script>
+		
 	</head>
 	<body>
 		<div class="head_deng">
@@ -67,15 +67,19 @@
 		<div id="time" class="wipe">
 			<div class="wipe_sm">
 				<span class="wipe_sm_p">预约只能更改一次，请和客户确认</span>
-				<span onclick="window.open('orders.html','_self')" class="cancel">取消</span>
+				<span id="quxiao" class="cancel">取消</span>
 				<span id="confirm2" class="cancel confirm">确定</span>
 			</div>
 		</div>
 		<div id="ensure" class="wipe">
 			<div class="wipe_sm">
 				<span class="wipe_sm_p">时间修改成功，记得准时赴约哦</span>
-				<span onclick="window.open('orders.html','_self')" class="wipe_one">确认</span>
+				<span id="queding" class="wipe_one">确认</span>
 			</div>
 		</div>
+		<script src="../../public/js/touch/zepto.min.js"></script>
+		<script src="../../public/js/touch/touch.js"></script>
+		<script src="../../public/js/touch/zepto-fx.js"></script>
+		<script src="../../public/js/appoint/changedate.js"></script>
 	</body>
 </html>

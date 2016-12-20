@@ -1,120 +1,108 @@
-window.onload = function(){
-	var user = document.getElementById("user");
-	var tel = document.getElementById("tel");
-	var pass = document.getElementById("pass");
-	var samepass = document.getElementById("samepass");
-	var tel_btn = document.getElementById("tel_btn");
-	var register = document.getElementById("register");
-	var reg_all = document.getElementById("reg_all");
-	var reg_wipe = document.getElementById("reg_wipe");
-	var high = document.getElementById("high");
-	var low = document.getElementById("low");
-	var menu = document.getElementById("menu");
-	var iden = document.getElementById("identity");
-	var li = document.getElementsByTagName("li");
-	
-	user.onblur = function(){
-		//console.log(building.value);
-		if(user.value == ""){
-			user.style.background = "#FFC0CB";
+$(function(){
+	$('#user').on('blur',function(){
+		if($('#user').val() == ""){
+			$('#user').css('background','#FFC0CB');
 		}else{
-			user.style.background = "#FFF";	
+			$('#user').css('background','#FFF');	
 		}
-		//console.log(user.value != "" && pass.value != "");
-		if(user.value != "" && tel.value != "" && pass.value != "" && samepass.value != ""){
-			register.style.background = "#EA5404";
-			register.onclick = function(){
-				reg_all.style.display = "none";
-				reg_wipe.style.display = "block";
-				/*window.open('../login/login.html','_self'); */
-			}
+		//console.log($('#user').val() != "" && $('#pass').val() != "");
+		if($('#user').val() != "" && $('#tel').val() != "" && $('#pass').val() != "" && $('#samepass').val() != ""){
+			$('#register').css('background','#EA5404');
+			$('#register').on('touchstart',function(){
+				$('#reg_all').css('display','none');
+				$('#reg_wipe').css('display','block');
+			})
 		}
-	}
-	tel.onblur = function(){
-		if(tel.value == ""){
-			tel.style.background = "#FFC0CB";
+	}) 
+	$('#tel').on('blur',function(){
+		if($('#tel').val() == ""){
+			$('#tel').css('background','#FFC0CB');
 		}else{
-			tel.style.background = "#FFF";	
+			$('#tel').css('background','#FFF');
 		}
 		
-		if(tel.value != ""){
+		if($('#tel').val() != ""){
 			//console.log(tel.value != "");
-			tel_btn.onclick = function(){
-				tel_btn.style.background = "#C7C7C7";
+			$('#tel_btn').on('touchstart',function(){
+				$('#tel_btn').css('background','#C7C7C7');
 				var i = 60;
-				tel_btn.value = i + "秒后重新发送";
+				$('#tel_btn').val(i + "秒后重新发送");
 				var timer = setInterval(function(){
 					i--;
-					tel_btn.value = i + "秒后重新发送";
+					$('#tel_btn').val(i + "秒后重新发送");
 					if(i <= 0){
 						clearInterval(timer);
-						tel_btn.value = "发送验证码";
+						$('#tel_btn').val("发送验证码");
 					}
 				}, 1000)
-			}	
+			})
 		}
 		
 		//console.log(user.value != "" && pass.value != "");
-		if(user.value != "" && tel.value != "" && pass.value != "" && samepass.value != ""){
-			register.style.background = "#EA5404";
-			register.onclick = function(){
-				reg_all.style.display = "none";
-				reg_wipe.style.display = "block";
-				/*window.open('../login/login.html','_self'); */
-			}
+		if($('#user').val() != "" && $('#tel').val() != "" && $('#pass').val() != "" && $('#samepass').val() != ""){
+			$('#register').css('background','#EA5404');
+			$('#register').on('touchstart',function(){
+				$('#reg_all').css('display','none');
+				$('#reg_wipe').css('display','block');
+			})
 		}
-	}
-	pass.onblur = function(){
+	}) 
+	$('#pass').on('blur',function(){
 		//console.log(address.value);
-		if(pass.value == ""){
-			pass.style.background = "#FFC0CB";
+		if($('#pass').val() == ""){
+			$('#pass').css('background','#FFC0CB');
 		}else{
-			pass.style.background = "#FFF";
+			$('#pass').css('background','#FFF');
 		}
 		//console.log(pass.value != "" && tel.value != "");
-		if(user.value != "" && tel.value != "" && pass.value != "" && samepass.value != ""){
-			register.style.background = "#EA5404";
-			register.onclick = function(){
-				reg_all.style.display = "none";
-				reg_wipe.style.display = "block";
-				/*window.open('../login/login.html','_self');*/ 
-			}
+		if($('#user').val() != "" && $('#tel').val() != "" && $('#pass').val() != "" && $('#samepass').val() != ""){
+			$('#register').css('background','#EA5404');
+			$('#register').on('touchstart',function(){
+				$('#reg_all').css('display','none');
+				$('#reg_wipe').css('display','block');
+			})
 		}
-	}
-	samepass.onblur = function(){
+	})
+	$('#samepass').on('blur',function(){
 		//console.log(address.value);
-		if(samepass.value == "" || samepass.value != pass.value){
-			samepass.style.background = "#FFC0CB";
+		if($('#samepass').val() == "" || $('#samepass').val() != $('#pass').val()){
+			$('#samepass').css('background','#FFC0CB');
 		}else{
-			samepass.style.background = "#FFF";
+			$('#samepass').css('background','#FFF');
 		}
 		//console.log(pass.value != "" && tel.value != "");
-		if(user.value != "" && tel.value != "" && pass.value != "" && samepass.value != ""){
-			register.style.background = "#EA5404";
-			register.onclick = function(){
-				reg_all.style.display = "none";
-				reg_wipe.style.display = "block";
-				/*window.open('../login/login.html','_self'); */
-			}
+		if($('#user').val() != "" && $('#tel').val() != "" && $('#pass').val() != "" && $('#samepass').val() != ""){
+			$('#register').css('background','#EA5404');
+			$('#register').on('touchstart',function(){
+				$('#reg_all').css('display','none');
+				$('#reg_wipe').css('display','block');
+			})
 		}
-	}
+	})
 	
-	high.onclick = function(){
-		high.style.display = "none";
-		low.style.display = "block";
-		menu.style.display = "block";
+	$('#high').on('touchstart',function(){
+		$('#high').css('display','none');
+		$('#low').css('display','block');
+		$('#menu').css('display','block');
+	})
+	$('#low').on('touchstart',function(){
+		$('#low').css('display','none');
+		$('#high').css('display','block');
+		$('#menu').css('display','none');
+	})
+	for(var i=0;i<$('.menu_list li').length;i++){
+		//console.log($('.menu_list li').length);
+		$('.menu_list li').eq(i).on('touchstart',function(){
+			//console.log($(this).text());
+			//console.log($('#identity').val());
+			$('#identity').val($(this).text());
+			$('#low').css('display','none');
+			$('#high').css('display','block');
+			$('#menu').css('display','none');
+		})
 	}
-	low.onclick = function(){
-		low.style.display = "none";
-		high.style.display = "block";
-		menu.style.display = "none";
-	}
-	for(var i=0;i<li.length;i++){
-		li[i].onclick = function(){
-			iden.value = this.innerHTML;
-			low.style.display = "none";
-			high.style.display = "block";
-			menu.style.display = "none";
-		}
-	}
-}
+
+	$('#fanhui').on('touchstart',function(){
+		window.open('login.html','_self');
+	})
+})
