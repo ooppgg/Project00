@@ -11,7 +11,7 @@ $(function(){
 			$('#login_btn').on('touchstart',function(){
 				/*add_all.style.display = "none";
 				add_zhe.style.display = "block";*/
-				window.open('../I/ILogin.html','_self'); 
+				window.open('../I/I.html','_self'); 
 			})
 		}
 	})
@@ -25,17 +25,21 @@ $(function(){
 		}
 		//console.log(pass.value != "" && user.value != "");
 		if($('#tel').val() != "" && $('#pass').val() != ""){
-			login_btn.style.background = "#EA5404";
 			$('#login_btn').css('background','#EA5404');
 			$('#login_btn').on('touchstart',function(){
 				/*add_all.style.display = "none";
 				add_zhe.style.display = "block";*/
-				window.open('../I/ILogin.html','_self'); 
+				window.open('../I/I.html','_self'); 
 			})
 		}
 	})
-	$('#fanhui').on('touchstart',function(){
-		 window.open('../I/I.html','_self');
+	
+	$('#login_btn').on('touchstart',function(){
+		sessionStorage.setItem("username",$('input[type=text]').val());
+		var session = sessionStorage.getItem("username");
+		/*if(sssion != null){
+			location.href = '../I/I.html';
+		}*/
 	})
 })
 	

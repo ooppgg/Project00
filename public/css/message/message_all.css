@@ -125,6 +125,9 @@ body {
   color: #fff;
   background: #ea5404;
 }
+.message_age {
+  display: none;
+}
 .mes_lump {
   width: 92%;
   margin: 0 auto;

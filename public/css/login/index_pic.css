@@ -5,11 +5,11 @@ body {
 }
 .logo {
   position: absolute;
-  top: 25%;
+  top: 30%;
   left: 50%;
-  margin-left: -44px;
-  width: 88px;
-  height: 88px;
+  margin-left: -27px;
+  width: 55px;
+  height: 82px;
 }
 .logo img {
   width: 100%;

@@ -1,23 +1,14 @@
-window.onload = function(){
-	var col_need = document.getElementById("col_need");
-	var col_buildings = document.getElementById("col_buildings");
-	var need = document.getElementById("need");
-	var buildings = document.getElementById("buildings");
-	
-	col_need.onclick = function(){
-		col_need.style.color = "#ea5404";
-		col_need.style.borderBottom = "1px solid #ea5404";
-		col_buildings.style.color = "#323232";
-		col_buildings.style.borderBottom = "1px solid #d6d7dc";
-		need.style.display = "block";
-		buildings.style.display = "none";
-	}
-	col_buildings.onclick = function(){
-		col_buildings.style.color = "#ea5404";
-		col_buildings.style.borderBottom = "1px solid #ea5404";
-		col_need.style.color = "#323232";
-		col_need.style.borderBottom = "1px solid #d6d7dc";
-		buildings.style.display = "block";
-		need.style.display = "none";
-	}
-}
+$(function(){
+	$('#col_need').on('touchstart',function(){
+		$('#col_need').addClass('coll_col');
+		$('#col_buildings').removeClass('coll_col');
+		$('#need').css('display','block');
+		$('#buildings').css('display','none');
+	})
+	$('#col_buildings').on('touchstart',function(){
+		$('#col_buildings').addClass('coll_col');
+		$('#col_need').removeClass('coll_col');
+		$('#buildings').css('display','block');
+		$('#need').css('display','none');
+	})
+})

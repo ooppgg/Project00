@@ -93,6 +93,9 @@ body {
   margin-right: 10px;
   margin-top: 11px;
 }
+.yi {
+  display: none;
+}
 .user {
   margin-top: 20px;
   width: 100%;
@@ -100,22 +103,56 @@ body {
   background: #fff;
   position: relative;
 }
-.user:before {
-  content: '';
-  position: absolute;
-  top: 15px;
-  left: 15px;
+.user .user_pic {
+  margin-top: 15px;
+  margin-left: 10px;
   width: 66px;
   height: 66px;
   border-radius: 50%;
   overflow: hidden;
-  background: url("../../img/me/log in_user-head@2x.png");
-  background-size: cover;
+  float: left;
 }
 .user .user_click {
-  margin-left: 90px;
+  margin-left: 15px;
   display: inline-block;
   line-height: 96px;
+  float: left;
+}
+.user .usersmal {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 65px;
+  left: 60px;
+}
+.user .username {
+  width: 120px;
+  height: 36px;
+  padding-top: 30px;
+  margin-left: 90px;
+  position: relative;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.user .username .username_n {
+  font-size: 14px;
+}
+.user .username .user_chan {
+  height: 20px;
+  color: #848484;
+  font-size: 12px;
+}
+.user .username .user_chan:after {
+  content: '';
+  position: absolute;
+  top: 51px;
+  left: 53px;
+  width: 12px;
+  height: 14px;
+  background: url("../../img/me/log-in_edit_icon@2x.png") no-repeat;
+  background-size: cover;
 }
 .user:after {
   content: '';
@@ -209,53 +246,6 @@ body {
   height: 14px;
   background: url("../../img/me/content_list_right_icon@2x.png") no-repeat;
   background-size: 50%;
-}
-.footer .footer_wor_1 {
-  background: url("../../img/footer_nav/bottom_nor_icon04@2x.png") no-repeat center 5px;
-  background-size: 24px 24px;
-}
-.footer .footer_wor_4 {
-  background: url("../../img/footer_nav/bottom_press_icon01@2x.png") no-repeat center 5px;
-  background-size: 24px 24px;
-}
-.user {
-  position: relative;
-}
-.user:before {
-  background: url("../../img/me/in_user_personaldata.png");
-  background-size: cover;
-}
-.user img {
-  width: 18px;
-  height: 18px;
-  position: absolute;
-  top: 65px;
-  left: 60px;
-}
-.user .username {
-  width: 70px;
-  height: 36px;
-  padding-top: 30px;
-  margin-left: 90px;
-  position: relative;
-}
-.user .username .username_n {
-  font-size: 14px;
-}
-.user .username .user_chan {
-  height: 20px;
-  color: #848484;
-  font-size: 12px;
-}
-.user .username .user_chan:after {
-  content: '';
-  position: absolute;
-  top: 51px;
-  left: 53px;
-  width: 12px;
-  height: 14px;
-  background: url("../../img/me/log-in_edit_icon@2x.png") no-repeat;
-  background-size: cover;
 }
 .footer .footer_wor_1 {
   background: url("../../img/footer_nav/bottom_nor_icon04@2x.png") no-repeat center 5px;

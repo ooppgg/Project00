@@ -1,28 +1,42 @@
-window.onload = function(){
-	var btn = document.getElementById("wipe_btn");
-	var wipeW = document.getElementById("wipe_wi");
-	var wipeQ = document.getElementById("wipe_quit");
-	var cancel = document.getElementById("cancel");
-	var cancel2 = document.getElementById("cancel2");
-	var confirm = document.getElementById("confirm");
-	var set_num = document.getElementById("set_num");
-	var quit = document.getElementById("quit");
-	btn.onclick = function(){
-		wipeW.style.display = "block";
+$(function(){
+	var x = sessionStorage.getItem("username");
+	if(x == null){
+		$('.setting_login').css('display','none');
+		$('.setting_wipe').css('display','block');
+	}else{
+		$('.setting_wipe').css('display','none');
+		$('.setting_login').css('display','block');
 	}
-	cancel.onclick = function(){
-		wipeW.style.display = "none";
-		wipeQ.style.display = "none";
-	}
-	confirm.onclick = function(){
-		wipeW.style.display = "none";
-		set_num.style.display = "none";
-	}
-	quit.onclick = function(){
-		wipeQ.style.display = "block";
-	}
-	cancel2.onclick = function(){
-		wipeQ.style.display = "none";
-	}
-}
+	$('#wipe_btn').on('touchstart',function(){
+		$('#wipe_wi').css('display','block');
+		$('#wipe_quit').css('display','none');
+	})
+	$('#cancel').on('touchstart',function(){
+		window.history.back();
+	})
+	$('#confirm').on('touchstart',function(){
+		$('#wipe_wi').css('display','none');
+		$('#set_num').css('display','none');
+	})
+	$('#quit').on('touchstart',function(){
+		$('#wipe_quit').css('display','block');
+		$('#wipe_wi').css('display','none');
+	})
+	$('#cancel2').on('touchstart',function(){
+		$('.wipe_quit').css('display','none');
+		$('#wipe_wi').css('display','none');
+	})
+	$('#confirm2').on('touchstart',function(){
+		window.open('../login/login.html','_self');
+	})
+	$('.setting_on_1').on('touchstart',function(){
+		window.open('about.html','_self');
+	})
+	$('#set_cancel').on('touchstart',function(){
+		window.history.back();
+	})
+	$('#set_confirm').on('touchstart',function(){
+		window.open('I.html','_self');
+	})
+})
 

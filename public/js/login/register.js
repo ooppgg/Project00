@@ -12,6 +12,10 @@ $(function(){
 				$('#reg_all').css('display','none');
 				$('#reg_wipe').css('display','block');
 			})
+			$('#forget').css('background','#EA5404');
+			$('#forget').on('touchstart',function(){
+				window.open('login.html','_self');
+			})
 		}
 	}) 
 	$('#tel').on('blur',function(){
@@ -45,6 +49,10 @@ $(function(){
 				$('#reg_all').css('display','none');
 				$('#reg_wipe').css('display','block');
 			})
+			$('#forget').css('background','#EA5404');
+			$('#forget').on('touchstart',function(){
+				window.open('login.html','_self');
+			})
 		}
 	}) 
 	$('#pass').on('blur',function(){
@@ -61,6 +69,10 @@ $(function(){
 				$('#reg_all').css('display','none');
 				$('#reg_wipe').css('display','block');
 			})
+			$('#forget').css('background','#EA5404');
+			$('#forget').on('touchstart',function(){
+				window.open('login.html','_self');
+			})
 		}
 	})
 	$('#samepass').on('blur',function(){
@@ -76,6 +88,10 @@ $(function(){
 			$('#register').on('touchstart',function(){
 				$('#reg_all').css('display','none');
 				$('#reg_wipe').css('display','block');
+			})
+			$('#forget').css('background','#EA5404');
+			$('#forget').on('touchstart',function(){
+				window.open('login.html','_self');
 			})
 		}
 	})
@@ -102,7 +118,7 @@ $(function(){
 		})
 	}
 
-	$('#fanhui').on('touchstart',function(){
-		window.open('login.html','_self');
+	$('.wipe_one').on('touchstart',function(){
+		window.open('../login/login.html','_self');
 	})
 })

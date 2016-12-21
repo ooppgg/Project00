@@ -231,10 +231,10 @@ ul {
   height: 3px;
   top: 12px;
   left: 2px;
-}
-.iss_buildings .iss_cho .radio_one #radio_two,
-.iss_buildings .iss_cho .radio_one #radio_three {
   display: none;
+}
+.iss_buildings .iss_cho .radio_one .rsma.rsma_on {
+  display: block;
 }
 .iss_buildings .iss_cho .cho_unit {
   color: #323232;

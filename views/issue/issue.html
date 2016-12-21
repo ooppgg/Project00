@@ -10,7 +10,7 @@
 		<title>二维码的房产单 -  杭州摆摆网络科技有限公司</title>
 		<link rel="stylesheet" href="//cdn.bootcss.com/normalize/5.0.0/normalize.min.css" />
 		<link rel="stylesheet" href="../../public/css/issue/issue.css" />
-		<script src="../../public/js/issue/issue.js"></script>
+		
 	</head>
 	<body>
 		<div class="iss_head">
@@ -139,10 +139,10 @@
 			<div class="iss_cho">
 				<span class="cho_tit">交付日期</span>
 				<input class="cho_short" type="text" placeholder="2015-06-21"/>
-				<div id="radio_on" class="radio_one">
+				<div  class="radio_one">
 					<img class="radio_big" src="../../public/img/issuebuildings/content_nor_icon@2x.png" alt="" />
 					<span class="radio_one_name">是否现房</span>
-					<img id="radio_one" class="rsma" src="../../public/img/issuebuildings/content_press_icon@2x.png" alt="" />
+					<img class="rsma rsma_on" src="../../public/img/issuebuildings/content_press_icon@2x.png" alt="" />
 				</div>
 			</div>
 			<div class="iss_cho">
@@ -152,19 +152,19 @@
 			<div class="iss_cho">
 				<span class="cho_tit">付款方式</span>
 				<input class="cho_short" type="text" placeholder="押三付一"/>
-				<div id="radio_tw" class="radio_one">
+				<div  class="radio_one">
 					<img class="radio_big" src="../../public/img/issuebuildings/content_nor_icon@2x.png" alt="" />
 					<span class="radio_one_name">是否含发票</span>
-					<img id="radio_two" class="rsma" src="../../public/img/issuebuildings/content_press_icon@2x.png" alt="" />
+					<img class="rsma" src="../../public/img/issuebuildings/content_press_icon@2x.png" alt="" />
 				</div>
 			</div>
 			<div class="iss_cho">
 				<span class="cho_tit">是否结佣</span>
 				<input class="cho_short" type="text" placeholder="一个月"/>
-				<div id="radio_th" class="radio_one">
+				<div  class="radio_one">
 					<img class="radio_big" src="../../public/img/issuebuildings/content_nor_icon@2x.png" alt="" />
 					<span class="radio_one_name">是</span>
-					<img id="radio_three" class="rsma" src="../../public/img/issuebuildings/content_press_icon@2x.png" alt="" />
+					<img class="rsma" src="../../public/img/issuebuildings/content_press_icon@2x.png" alt="" />
 				</div>
 			</div>
 			<div class="iss_cho">
@@ -200,5 +200,9 @@
 				<span onclick="window.open('../homepage/index.html','_self')" class="wipe_one">确定</span>
 			</div>
 		</div>
+		<script src="../../public/js/touch/zepto.min.js"></script>
+		<script src="../../public/js/touch/touch.js"></script>
+		<script src="../../public/js/touch/zepto-fx.js"></script>
+		<script src="../../public/js/issue/issue.js"></script>
 	</body>
 </html>

@@ -9,11 +9,11 @@
 		<title>二维码的房产单 -  杭州摆摆网络科技有限公司</title>
 		<link rel="stylesheet" href="//cdn.bootcss.com/normalize/5.0.0/normalize.min.css" />
 		<link rel="stylesheet" href="../../public/css/I/editdata.css" />
-		<script src="../../public/js/I/editdata.js"></script>
+		
 	</head>
 	<body>
 		<div class="head_deng">
-			<img onclick="window.open('personalData.html','_self')" src="../../public/img/login/nav_back_icon@2x.png" alt="" />
+			<img id="back" src="../../public/img/login/nav_back_icon@2x.png" alt="" />
 			<span>个人资料</span>		
 		</div>
 		<div class="per_message">
@@ -42,27 +42,32 @@
 				<span class="message_ri">18956024163</span>
 			</div>
 			<div class="message_pic">
-				<div class="mes_pic_1" id="pic_1">
+				<div class="mes_pic_1">
 					<div class="mes_pic_back"></div>
 					<span class="mes_pic_wor">微信二维码</span>
 				</div>
-				<div class="mes_pic_1 mes_pic_2" id="pic_2">
+				<div class="mes_pic_1 mes_pic_2">
 					<div class="mes_pic_back"></div>
 					<span class="mes_pic_wor">营业执照</span>
 				</div>
-				<div class="mes_pic_1 mes_pic_3" id="pic_3">
+				<div class="mes_pic_1 mes_pic_3">
 					<div class="mes_pic_back"></div>
 					<span class="mes_pic_wor">租售代理协议</span>
 				</div>
 			</div>
 			<div class="clear"></div>
 		</div>
-		<div class="edit_pic" id="edit_pic">
+		<div class="edit_pic">
 			<div class="edit_pic_sm">
 				<span class="ed_pic_sm_wor">拍照</span>
 				<span class="ed_pic_sm_wor"><input type="file" />从相册选择</span>
 				<span class="ed_pic_sm_wor sm_wor_cha" id="cancel">取消</span>
 			</div>
 		</div>
+		<script src="../../public/js/touch/zepto.min.js"></script>
+		<script src="../../public/js/touch/touch.js"></script>
+		<script src="../../public/js/touch/zepto-fx.js"></script>
+		<script src="../../public/js/I/editdata.js"></script>
+		<script src="../../public/js/homepage/back.js"></script>
 	</body>
 </html>

@@ -1,4 +1,11 @@
 $(function(){
+	var x = sessionStorage.getItem("username");
+	//console.log(x);
+	if(x == null){
+		$('.small_num').css('display','none');
+	}else{
+		$('.small_num').css('display','block');
+	}
 	$('#homepage').on('touchstart',function(){
 		window.open('../homepage/index.html','_self');
 	})
@@ -12,6 +19,6 @@ $(function(){
 		window.open('../message/message_all.html','_self');
 	})
 	$('#me').on('touchstart',function(){
-		window.open('../I/ILogin.html','_self');
+		window.open('../I/I.html','_self');
 	})
 })

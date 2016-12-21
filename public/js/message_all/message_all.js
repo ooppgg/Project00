@@ -1,4 +1,13 @@
 $(function(){
+	var x = sessionStorage.getItem("username");
+	if(x == null){
+		$('.message_age').css('display','none');
+		$('.need_num').css('display','none');
+
+	}else{
+		$('.message_age').css('display','block');
+		$('.need_num').css('display','block');
+	}
 	$('#message_on').on('touchstart',function(){
 		$('#message_on').addClass("mes_col");
 		$('#notice_on').removeClass("mes_col");

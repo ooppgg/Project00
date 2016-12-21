@@ -9,42 +9,56 @@
 		<title>二维码的房产单 -  杭州摆摆网络科技有限公司</title>
 		<link rel="stylesheet" href="//cdn.bootcss.com/normalize/5.0.0/normalize.min.css" />
 		<link rel="stylesheet" href="../../public/css/I/setting.css" />
-		<script src="../../public/js/I/setting.js"></script>
+		
 	</head>
 	<body>
-		<div class="head_deng">
-			<img onclick="window.open('ILogin.html','_self')" src="../../public/img/login/nav_back_icon@2x.png" alt="" />
-			<span>设置</span>		
-		</div>
-		<div class="setting_on">
-			<span>接收需求</span>
-			<div class="setting_hua">
-				<div class="se_hua_sm"></div>
+		<div class="setting_login">
+			<div class="head_deng">
+				<img id="back" src="../../public/img/login/nav_back_icon@2x.png" alt="" />
+				<span>设置</span>		
+			</div>
+			<div class="setting_on">
+				<span>接收需求</span>
+				<div class="setting_hua">
+					<div class="se_hua_sm"></div>
+				</div>
+			</div>
+			<div class="setting_on setting_on_1">
+				<span>关于</span>
+			</div>
+			<div id="wipe_btn" class="setting_on setting_on_1">
+				<span>清除缓存</span>
+				<span id="set_num" class="set_num">7.02M</span>
+			</div>
+			<div id="quit" class="setting_on setting_on_2">
+				<span>退出登录</span>
+			</div>
+			<div id="wipe_wi" class="wipe">
+				<div class="wipe_sm">
+					<span class="wipe_sm_p">您确定要清理缓存么？</span>
+					<span id="cancel" class="cancel">取消</span>
+					<span id="confirm" class="cancel confirm">确定</span>
+				</div>
+			</div>
+			<div id="wipe_quit" class="wipe">
+				<div class="wipe_sm">
+					<span class="wipe_sm_p">您确定要退出登录么？</span>
+					<span id="cancel2" class="cancel">取消</span>
+					<span id="confirm2" class="cancel confirm">确定</span>
+				</div>
 			</div>
 		</div>
-		<div onclick="window.open('about.html','_self')" class="setting_on setting_on_1">
-			<span>关于</span>
-		</div>
-		<div id="wipe_btn" class="setting_on setting_on_1">
-			<span>清除缓存</span>
-			<span id="set_num" class="set_num">7.02M</span>
-		</div>
-		<div id="quit" class="setting_on setting_on_2">
-			<span>退出登录</span>
-		</div>
-		<div id="wipe_wi" class="wipe">
-			<div class="wipe_sm">
-				<span class="wipe_sm_p">您确定要清理缓存么？</span>
-				<span id="cancel" class="cancel">取消</span>
-				<span id="confirm" class="cancel confirm">确定</span>
+		<div class="setting_wipe">
+			<div class="setting_none">
+				<span class="none_wor">请先进行登录</span>
+				<span id="set_cancel" class="none_can">取消</span>
+				<span id="set_confirm" class="none_can none_con">确定</span>
 			</div>
 		</div>
-		<div id="wipe_quit" class="wipe">
-			<div class="wipe_sm">
-				<span class="wipe_sm_p">您确定要退出登录么？</span>
-				<span id="cancel2" class="cancel">取消</span>
-				<span onclick="window.open('../../I/I.html','_self')" class="cancel confirm">确定</span>
-			</div>
-		</div>
+		<script src="../../public/js/touch/zepto.min.js"></script>
+		<script src="../../public/js/touch/touch.js"></script>
+		<script src="../../public/js/touch/zepto-fx.js"></script>
+		<script src="../../public/js/I/setting.js"></script>
+		<script src="../../public/js/homepage/back.js"></script>
 	</body>
 </html>
