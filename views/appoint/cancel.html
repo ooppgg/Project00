@@ -8,12 +8,12 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1 ,user-scalable=no" />
 		<title>二维码的房产单 -  杭州摆摆网络科技有限公司</title>
 		<link rel="stylesheet" href="//cdn.bootcss.com/normalize/5.0.0/normalize.min.css" />
-		<link rel="stylesheet" href="../../public/css/appoint/appointdetails.css" />
+		<link rel="stylesheet" href="../../public/css/appoint/cancel.css" />
 		
 	</head>
 	<body>
 		<div class="head_deng">
-			<img src="../../public/img/login/nav_back_icon@2x.png" alt="" />
+			<img id="back" src="../../public/img/login/nav_back_icon@2x.png" alt="" />
 			<span>取消预订</span>		
 		</div>
 		<span class="must">预约人</span>
@@ -42,17 +42,42 @@
 		<div class="appo_bar_3">
 			<span class="bar_time">2016-08-08</span>
 		</div>
-		<span class="appo_btn">接单</span>
+		<span class="must">取消原因（至少选择一项）</span>
+		<div class="result">
+			<div class="result_one">
+				<span class="result_kuang"></span>
+				<span class="result_yes"></span>
+				<span class="result_wor">客户不满意</span>
+			</div>
+			<div class="result_one">
+				<span class="result_kuang"></span>
+				<span class="result_yes"></span>
+				<span class="result_wor">已经联系客户，预约取消</span>
+			</div>
+			<div id="result_re" class="result_re">
+				<span class="result_kuang"></span>
+				<span class="result_yes"></span>
+				<span class="result_wor">其他原因</span>
+			</div>
+			<textarea name="" rows="4" cols="4">原因</textarea>
+		</div>
+		<span class="appo_btn">确定</span>
 		<div id="wipe_appo" class="wipe">
 			<div class="wipe_sm">
 				<span class="wipe_sm_p">您确定要拨打电话么？</span>
 				<span id="cancel" class="cancel">取消</span>
-				<span id="confirm" class="cancel confirm">接单</span>
+				<span id="confirm" class="cancel confirm">确定</span>
+			</div>
+		</div>
+		<div id="cancel_kuang" class="wipe">
+			<div class="wipe_sm">
+				<span class="wipe_sm_p">取消订单提交成功</span>
+				<span class="wipe_one queding">确定</span>
 			</div>
 		</div>
 		<script src="../../public/js/touch/zepto.min.js"></script>
-		<script src="../../public/js/touch/touch.js"></script>
-		<script src="../../public/js/touch/zepto-fx.js"></script>
 		<script src="../../public/js/appoint/appointdetails.js"></script>
+		<script src="../../public/js/homepage/back.js"></script>
+		<script src="../../public/js/appoint/cancel.js"></script>
 	</body>
 </html>

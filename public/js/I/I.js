@@ -1,7 +1,8 @@
 $(function(){
-	var x = sessionStorage.getItem("username");
-	if(x == null){
+	var session = sessionStorage.getItem("username");
+	if(session == null){
 		$('.wei').css('display','block');
+		
 		$('.yi').css('display','none');
 		$('.user').on('touchstart',function(){
 			window.open('../login/login.html','_self');
@@ -9,6 +10,7 @@ $(function(){
 		$('#coll').val(0);
 		$('#int').val(0);
 	}else{
+		$('.username_n').html(session);
 		$('.wei').css('display','none');
 		$('.yi').css('display','block');
 		$('.user').on('touchstart',function(){

@@ -32,7 +32,8 @@ $(function(){
 		}
 	})
 	$('.wipe_one').on('touchstart',function(){
-		window.open('../issue/issue.html','_self')
+		/*window.open('../issue/issue.html','_self')*/
+		window.history.back();
 	})
 	/*address.onblur = function(){
 		//console.log(address.value);

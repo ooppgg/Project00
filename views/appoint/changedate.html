@@ -13,7 +13,7 @@
 	</head>
 	<body>
 		<div class="head_deng">
-			<span onclick="window.open('orders.html','_self')" class="cha_cancel">取消</span>
+			<span id="back" class="cha_cancel">取消</span>
 			<span>预约改期</span>		
 			<span id="change" class="cha_confirm">确定</span>
 		</div>
@@ -23,7 +23,7 @@
 				<span class="bar_name">你才是张三</span><br/>
 				<span class="bar_type">租户</span>
 			</div>
-			<div id="wipe_btn" class="bar_tel">
+			<div class="bar_tel">
 				<img src="../../public/img/reservedetails/content_icon_call@2x.png" alt="" />
 			</div>
 		</div>
@@ -55,7 +55,7 @@
 		</div>
 		<span class="must">更改预约时间</span>
 		<div class="change_time">
-			<input id="txt" type="text" placeholder="2016/08/08"/>
+			<input type="date" placeholder="2016/08/08"/>
 		</div>
 		<div id="wipe_appo" class="wipe">
 			<div class="wipe_sm">
@@ -78,8 +78,7 @@
 			</div>
 		</div>
 		<script src="../../public/js/touch/zepto.min.js"></script>
-		<script src="../../public/js/touch/touch.js"></script>
-		<script src="../../public/js/touch/zepto-fx.js"></script>
 		<script src="../../public/js/appoint/changedate.js"></script>
+		<script src="../../public/js/homepage/back.js"></script>
 	</body>
 </html>

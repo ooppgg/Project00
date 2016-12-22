@@ -10,6 +10,7 @@ $(function(){
 		$('#issue_all').css('display','none');
 	})
 	$('.queding').on('touchstart',function(){
-		window.open('../homepage/index.html','_self');
+		/*window.open('../homepage/index.html','_self');*/
+		window.history.go(-2);
 	})
 })

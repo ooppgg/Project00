@@ -1,15 +1,15 @@
 $(function(){
-	$('#wipe_btn').on('touchstart',function(){
+	$('.bar_tel').on('touchstart',function(){
 		$('#wipe_appo').css('display','block');
 	})
 	$('#cancel1').on('touchstart',function(){
 		$('#wipe_appo').css('display','none');
 	})
 	$('#confirm1').on('touchstart',function(){
-		$('#wipe_appo').css('display','none');
+		location.href = '../homepage/index.html';
 	})
 	$('#quxiao').on('touchstart',function(){
-		window.open('orders.html','_self');
+		window.history.back();
 	})
 	$('#change').on('touchstart',function(){
 		$('#time').css('display','block');	
@@ -18,6 +18,6 @@ $(function(){
 		$('#ensure').css('display','block');
 	})
 	$('#queding').on('touchstart',function(){
-		window.open('orders.html','_self');	
+		location.href = 'orders.html';	
 	})
 })

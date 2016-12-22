@@ -1,18 +1,24 @@
 $(function(){
-	$('#wipe_btn').on('touchstart',function(){
-		$('#wipe_appo').css('display','block');
+	$('.bar_tel').on('touchstart',function(){
+		$('.wipe').css('display','block');
 	})
 	$('#cancel').on('touchstart',function(){
-		$('#wipe_appo').css('display','none');
+		$('.wipe').css('display','none');
 	}) 
 	$('#confirm').on('touchstart',function(){
-		$('#wipe_appo').css('display','none');
+		location.href = '../homepage/index.html';
+	})
+	$('.appo_btn').on('touchstart',function(){
+
 	})
 	$('#btn01').on('touchstart',function(){
 		window.open('changedate.html','_self');	
 	})
 	$('#btn02').on('touchstart',function(){
-		window.open('upload.html','_self');	
+		location.href = 'upload.html';	
+	})
+	$('.btn_line').on('touchstart',function(){
+		location.href = 'cancel.html';
 	})
 });
 	

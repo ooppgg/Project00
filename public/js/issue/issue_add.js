@@ -18,10 +18,10 @@ $(function(){
 	$('.add_x').on('touchstart',function(){
 		window.open('../homepage/index.html','_self');
 	})
-	$('.none_can').on('touchstart',function(){
+	$('#none_can').on('touchstart',function(){
 		window.history.back();
 	})
-	$('.none_con').on('touchstart',function(){
+	$('#none_con').on('touchstart',function(){
 		window.open('../login/login.html','_self');
 	})
 

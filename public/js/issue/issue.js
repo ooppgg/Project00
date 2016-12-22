@@ -58,7 +58,31 @@ $(function(){
 			f = true;
 		}
 	})
-	$('#iss_btn').on('touchstart',function(){
+	$('#iss_btn_one').on('touchstart',function(){
 		$('#iss_succ').css('display','block');
+	})
+	$('#iss_btn_one').on('tap',function(){
+		var time = setInterval(function(){
+			var scrolltop = $(window).scrollTop();
+			 $(window).scrollTop(scrolltop-10);
+			 if(scrolltop==0){
+				clearInterval(time);
+			}
+		},10)
+	})
+	$('.iss_cancel').on('tap',function(){
+		var time = setInterval(function(){
+			var scrolltop = $(window).scrollTop();
+			 $(window).scrollTop(scrolltop-10);
+			 if(scrolltop==0){
+				clearInterval(time);
+			}
+		},10)
+	})
+	$('.wipe_one').on('touchstart',function(){
+		window.open('../homepage/index.html','_self');
+	})
+	$('.confirm').on('touchstart',function(){
+		window.history.back();
 	})
 })
